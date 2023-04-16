@@ -5,7 +5,6 @@ const app = express();
 //make a port with env variable or 3000
 const port = process.env.PORT || 3000;
 
-// Create a connection to the PostgreSQL database
 const pool = new Pool({
   user: 'postgres',
   password: 'w0qFEwUSY9cV9o6jhVgy',
