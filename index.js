@@ -6,11 +6,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const pool = new Pool({
-  user: 'postgres',
-  password: 'w0qFEwUSY9cV9o6jhVgy',
-  host: 'containers-us-west-149.railway.app',
-  port: 7318, // or your PostgreSQL port
-  database: 'railway'
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  host: process.env.PGHOST,
+  port: process.env.PGPORT,
+  database: process.env.PGDATABASE,
 });
 
 // Middleware for parsing JSON in request body
