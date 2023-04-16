@@ -194,4 +194,14 @@ app.put('/balance/:username', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+  //check database connection
+  pool.connect((err, client, release) => {
+    if(err) {
+      console.error('Error acquiring client', err.stack)
+    } else {
+      console.log('Connected to database')
+    }
+  })
 });
+
+
